@@ -28,7 +28,8 @@ describe('UserService', () => {
     const userData: Prisma.UserCreateInput = {
       email: 'test@example.com',
       name: 'Test User',
-      phone: '1234567890'
+      phone: '1234567890',
+      address: '123 Test St',
     };
 
     const createdUser: User = {
@@ -36,6 +37,7 @@ describe('UserService', () => {
       name: userData.name ?? null,
       email : userData.email,
       phone: userData.phone ?? null,
+      address: userData.address ?? null,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
@@ -52,6 +54,7 @@ describe('UserService', () => {
       email: 'test@example.com',
       name: 'Test User',
       phone: '1234567890',
+      address: '123 Test St',
       createdAt: new Date(),
       updatedAt: new Date(),
     };
@@ -68,6 +71,7 @@ describe('UserService', () => {
         email: 'test1@example.com',
         name: 'Test User 1',
         phone: '1234567891',
+        address: '123 Test St',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -76,6 +80,7 @@ describe('UserService', () => {
         email: 'test2@example.com',
         name: 'Test User 2',
         phone: '1234567892',
+        address: '123 Test St',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -84,6 +89,7 @@ describe('UserService', () => {
         email: 'test3@example.com',
         name: 'Test User 3',
         phone: '1234567893',
+        address: '123 Test St',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -106,6 +112,7 @@ describe('UserService', () => {
           email: 'test@example.com',
           name: typeof updateData.name === 'string' ? updateData.name : updateData.name?.set ?? null,
           phone: typeof updateData.phone === 'string' ? updateData.phone : updateData.phone?.set ?? null,
+          address: '123 Test St',
           createdAt: new Date(),
           updatedAt: new Date(),
       };
@@ -122,6 +129,7 @@ describe('UserService', () => {
       email: 'test@example.com',
       name: 'Test User',
       phone: '1234567890',
+      address: '123 Test St',
       createdAt: new Date(),
       updatedAt: new Date(),
     };

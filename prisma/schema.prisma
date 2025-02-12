@@ -18,6 +18,7 @@ model User {
   name      String?  @unique
   email     String   @unique
   phone     String?  @unique
+  address   String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
